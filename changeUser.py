@@ -25,7 +25,7 @@ def delete(uni, cal):
 def listing(cal):
     service = get_calendar_service()
 
-    acl = service.acl().list(calendarId=cal).execute()
+    acl = service.acl().list(calendarId = cal).execute()
 
     for rule in acl['items']:
         print('%s: %s' % (rule['id'], rule['role']))
