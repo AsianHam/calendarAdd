@@ -22,10 +22,18 @@ def delete(uni, cal):
 
     service.acl().delete(calendarId = cal, ruleId = user).execute()
 
-def listing(cal):
+def listUser(cal):
     service = get_calendar_service()
 
     acl = service.acl().list(calendarId = cal).execute()
 
+    users = []
+
     for rule in acl['items']:
-        print('%s: %s' % (rule['id'], rule['role']))
+        users.append('%s: %s' % (rule['id'], rule['role']))
+    
+    return(users)
+
+if __name__ == "__main__":
+    broadway = 'columbia.edu_3634343538303339393332@resource.calendar.google.com'
+    print(listUser(broadway))

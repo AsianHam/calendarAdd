@@ -10,6 +10,7 @@ from google.auth.transport.requests import Request
 SCOPES = ['https://www.googleapis.com/auth/calendar']
 
 CREDENTIALS_FILE = sys._MEIPASS + '/credentials.json'
+#CREDENTIALS_FILE = 'credentials.json'
 
 def get_calendar_service():
     creds = None
@@ -17,10 +18,11 @@ def get_calendar_service():
    # created automatically when the authorization flow completes for the first
    # time.
 
+    #"""
     path = sys._MEIPASS + '/token.pickle'
     with open(path, 'rb') as token:
         creds = pickle.load(token)
-
+    #"""
     """
     if os.path.exists('token.pickle'):
         with open('token.pickle', 'rb') as token:
