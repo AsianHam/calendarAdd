@@ -13,7 +13,7 @@ def add(uni, cal):
         'role': 'writer'
     }
 
-    service.acl().insert(calendarId = cal, body = rule, sendNotifications = False).execute()
+    service.acl().insert(calendarId = cal, body = rule, sendNotifications = True).execute()
 
 def delete(uni, cal):
     service = get_calendar_service()
