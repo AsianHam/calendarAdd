@@ -591,7 +591,12 @@ def main(info):
             return(["yes", info[3]])
 
     except Exception as ex:
-        return([ex, info[3]])
+        error = str(ex).split("returned")[1]
+        if "Rate Limit Exceeded" in error:
+            time.sleep(5)
+            main(info)
+        else:
+            return([error, info[0], info[3]])
 
 def parallel(broadwayBool, yard9aBool, yard9bBool, yard9cBool, lew203aBool, lew203bBool,
                 lew203dBool, lew203eBool, lew203fBool, lew203iBool, lew203k6Bool, lew203k7Bool,
@@ -664,17 +669,21 @@ def parallel(broadwayBool, yard9aBool, yard9bBool, yard9cBool, lew203aBool, lew2
     for i in range(len(records)):
         if records[i][0] != "yes" and records[i][0] != "list":
             errorBool = True
-            spaces0 = Label(newCanvas, bg = bColor1).grid(row = 0 + (5 * i))
+            spaces0 = Label(newCanvas, bg = bColor1).grid(row = 0 + (7 * i))
             display1 = Label(newCanvas, text = "Finished but with errors...", bg = bColor1, fg = fColor1)
-            display1.grid(row = 1 + (5 * i))
+            display1.grid(row = 1 + (7 * i))
 
-            spaces1 = Label(newCanvas, bg = bColor1).grid(row = 2 + (5 * i))
+            spaces1 = Label(newCanvas, bg = bColor1).grid(row = 2 + (7 * i))
             display2 = Label(newCanvas, text = records[i][0], bg = bColor1, fg = fColor1)
-            display2.grid(row = 3 + (5 * i))
+            display2.grid(row = 3 + (7 * i))
 
-            spaces2= Label(newCanvas, bg = bColor1).grid(row = 3)
+            spaces2 = Label(newCanvas, bg = bColor1).grid(row = 4 + (7 * i))
             display3 = Label(newCanvas, text = records[i][1], bg = bColor1, fg = fColor1)
-            display3.grid(row = 4 + (5 * i))
+            display3.grid(row = 5 + (7 * i))
+
+            spaces3 = Label(newCanvas, bg = bColor1).grid(row = 6 + (7 * i))
+            display4 = Label(newCanvas, text = records[i][2], bg = bColor1, fg = fColor1)
+            display4.grid(row = 7 + (7 * i))
 
     if errorBool == False:
         display1 = Label(newCanvas, text = "Finished!", font = ('Helvetica', '17'), bg = bColor1, fg = fColor1)
