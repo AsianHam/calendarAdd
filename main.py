@@ -10,38 +10,9 @@ import time
 
 #All calendar IDs
 newDict = {
-    '2875 Broadway' : 'columbia.edu_3634343538303339393332@resource.calendar.google.com',
-    'The Yard 9A' : 'columbia.edu_1886rf4mc1mfag6kghp73f2fttf5i6gb6os30e1m6ko38dhn68@resource.calendar.google.com',
-    'The Yard 9B' : 'columbia.edu_1880mgrd7sf92glaj469rmeah1t1u6gb6orjic9o6cs3ed1o68@resource.calendar.google.com',
-    'The Yard 9C' : 'columbia.edu_188el4hr2ok5minflnjojhgapfuga6gb6orjgd9k68pjgcpg6c@resource.calendar.google.com',
-    'Lewisohn 203A' : 'columbia.edu_35343032323839342d363935@resource.calendar.google.com',
-    'Lewisohn 203B' : 'columbia.edu_1884n0i2dkfgmi32isqpcealde0b86gb6kp36dhl60r3cd9k64@resource.calendar.google.com',
-    'Lewisohn 203D' : 'columbia.edu_3532353238343634393731@resource.calendar.google.com',
-    'Lewisohn 203E' : 'columbia.edu_1886ghk841pv6hftl62d73rd3675o6gb6kp3cc9g68p38c9m6o@resource.calendar.google.com',
-    'Lewisohn 203F' : 'columbia.edu_18813q25q6djqgfslqaeauismuv9o6g96kp3ed1o60qj2e0@resource.calendar.google.com',
-    'Lewisohn 203I' : 'columbia.edu_1884cst50kde2g3vmdci2rqh09gl06gb6kpj0e1n74pjed1p6c@resource.calendar.google.com',
-    'Lewisohn 203K-6' : 'columbia.edu_188c1aq7s485qgu0hg5jd0hmcip6g6gb6sp36d9k74sj8d9m6o@resource.calendar.google.com',
-    'Lewisohn 203K-7' : 'columbia.edu_1885n4lramp88hndl93qf9gfhotpi6gb6sp34e9n74p32dhm74@resource.calendar.google.com',
-    'Lewisohn 203N' : 'columbia.edu_188cdrv99d5hsj9mlb470edcu214e6gb6kpjac9p6os36d9h60@resource.calendar.google.com',
-    'Lewisohn 203Y' : 'columbia.edu_3534363133303738373435@resource.calendar.google.com',
-    'Lewisohn 203Z' : 'columbia.edu_3534373434303839393134@resource.calendar.google.com',
-    'Lewisohn 214A' : 'columbia.edu_35333233343630372d333234@resource.calendar.google.com',
-    'Lewisohn 303A' : 'columbia.edu_313935343339302d393131@resource.calendar.google.com',
-    'Lewisohn 303C' : 'columbia.edu_333135393838313532@resource.calendar.google.com',
-    'Lewisohn 504A' : 'columbia.edu_3934343437373831353937@resource.calendar.google.com',
-    'Lewisohn 504B' : 'columbia.edu_3934353736353031323032@resource.calendar.google.com',
-    'Lewisohn 504C' : 'columbia.edu_393436313334353532@resource.calendar.google.com',
-    'Lewisohn 504D' : 'columbia.edu_39343733343433372d3431@resource.calendar.google.com',
-    'Lewisohn 504F' : 'columbia.edu_39343935353630382d323730@resource.calendar.google.com',
-    'Lewisohn 203.3' : 'columbia.edu_188dlk63ma0akg5unmvgkn43inb6q6gb64pjadpk6ko3acpi60@resource.calendar.google.com',
-    'Lewisohn 203.3.2' : 'columbia.edu_1880oaobslh32ipck6iffvubdaleq@resource.calendar.google.com',
-    'Lewisohn 203.4' : 'columbia.edu_1888m15lnejvsgunm92k0fhudk3ns6gb70o34d1h6ss38d1m60@resource.calendar.google.com',
-    'Lewisohn 203.6' : 'columbia.edu_188bk3blna4cei5imtndensvomege6gb74ojccho70oj6dpi60@resource.calendar.google.com',
-    'Lewisohn 203.7' : 'columbia.edu_1880jsfmm7er2j81huvtde7lcsp9a6ga68ojacho70r34e9n@resource.calendar.google.com',
-    'Lewisohn 504.1' : 'columbia.edu_18889cge37182h4dlhno07mhsbrhu6gb6ks3idpo64pjae9m68@resource.calendar.google.com',
-    'Lewisohn 504.2' : 'columbia.edu_18855soespk0mjvbnkalccoa9l7n46ga6cq3gd1g60o32dhn@resource.calendar.google.coms',
-    'Lewisohn 504.3' : 'columbia.edu_1889f7lel2udah5rnff5ki9u8lmhm6ga64oj4e1n6osjgc9g@resource.calendar.google.com',
-    'Lewisohn 504.4' : 'columbia.edu_18810hagnega6j6djosj53k6t6gi86gb74p3cdhg6gr3gcpl70@resource.calendar.google.com',
+    'cal1' : 'id1@resource.calendar.google.com',
+    'cal2' : 'id2@resource.calendar.google.com',
+    'cal3' : 'id3@resource.calendar.google.com'
 }
 
 def build():
