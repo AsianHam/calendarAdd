@@ -35,5 +35,5 @@ def listUser(cal):
     return(users)
 
 if __name__ == "__main__":
-    broadway = 'columbia.edu_3634343538303339393332@resource.calendar.google.com'
-    print(listUser(broadway))
+    calendar = 'id@resource.calendar.google.com'
+    print(listUser(calendar))

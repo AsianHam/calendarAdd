@@ -9,8 +9,8 @@ from google.auth.transport.requests import Request
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/calendar']
 
-CREDENTIALS_FILE = sys._MEIPASS + '/credentials.json'
-#CREDENTIALS_FILE = 'credentials.json'
+#CREDENTIALS_FILE = sys._MEIPASS + '/credentials.json'   #enable if including credentials inside the exe file
+CREDENTIALS_FILE = 'credentials.json'  #enable by default
 
 def get_calendar_service():
     creds = None
@@ -18,12 +18,6 @@ def get_calendar_service():
    # created automatically when the authorization flow completes for the first
    # time.
 
-    #"""
-    path = sys._MEIPASS + '/token.pickle'
-    with open(path, 'rb') as token:
-        creds = pickle.load(token)
-    #"""
-    """
     if os.path.exists('token.pickle'):
         with open('token.pickle', 'rb') as token:
             creds = pickle.load(token) 
@@ -39,7 +33,6 @@ def get_calendar_service():
         # Save the credentials for the next run
         with open('token.pickle', 'wb') as token:
             pickle.dump(creds, token)
-    """
 
     service = build('calendar', 'v3', credentials=creds)
     return service
